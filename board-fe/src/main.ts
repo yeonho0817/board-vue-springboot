@@ -4,14 +4,17 @@ import router from './router'
 import { Quasar } from "quasar";
 import "@quasar/extras/material-icons/material-icons.css";
 import "quasar/src/css/index.sass";
+import { Notify } from 'quasar';
 
 import "@/styles/index.scss";
+
+
 
 const app = createApp(App);
 
 app.use(Quasar, {
-    plugins: {},
-  });
+  plugins: {Notify},
+});
 
 app
 .use(router)
